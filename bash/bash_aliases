@@ -1,0 +1,43 @@
+# cd shortcuts
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+
+# ls shortcuts
+alias l1="ls -1"
+alias l="l1"
+alias ll="ls -lh"
+alias la="ls -a"
+alias lla="ls -lha"
+alias ls="ls --color"
+
+# Bash shortcuts
+alias dr="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
+alias dev="cd ~/Development"
+alias g="git"
+alias h="history"
+alias cl="clear"
+alias j="jobs"
+alias o="open"
+alias p="python"
+alias sze="du -hd 0"
+
+# Brew Cask shortcut
+alias cask="brew cask"
+
+# System shortcuts
+alias sysupdate="sudo softwareupdate -i -a; brew update; brew upgrade"
+alias dotshow="defaults write com.apple.Finder AppleShowAllFiles -bool YES && killall Finder"
+alias dothide="defaults write com.apple.Finder AppleShowAllFiles -bool NO && killall Finder"
+alias cleanup="find . -type f -name '*.DS_Store' ls -delete"
+
+# Network
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias whois="whois -h whois-servers.net"
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+# Allow aliases to be sudo’ed
+alias sudo='sudo '

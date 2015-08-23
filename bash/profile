@@ -1,0 +1,67 @@
+[ -f ~/.unboX/bash/bashrc ] && source ~/.unboX/bash/bashrc
+
+[ -f ~/.unboX/bash/bash_aliases ] && source ~/.unboX/bash/bash_aliases
+
+# Make vim the default editor
+export EDITOR="subl -w"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+bind "set mark-symlinked-directories on"
+
+# Intelligent Up/Down search behaviour"
+bind '"\e[B": history-search-forward'
+bind '"\e[A": history-search-backward'
+
+bind "set match-hidden-files off"
+bind "set page-completions off"
+bind "set completion-query-items 100"
+
+bind "set visible-stats on"
+
+bind "set skip-completed-text on"
+
+bind "set input-meta on"
+bind "set output-meta on"
+bind "set convert-meta off"
+
+# Add tab completion for `defaults read|write NSGlobalDomain`
+# You could just use `-g` instead, but I like being explicit
+complete -W "NSGlobalDomain" defaults
+
+# Add bash completion
+if [ -f /usr/local/etc/bash_completion ]; then
+  . /usr/local/etc/bash_completion
+fi
+if [ -d /usr/local/etc/bash_completion.d ]; then
+  . /usr/local/etc/bash_completion.d/git-completion.bash
+  . /usr/local/etc/bash_completion.d/git-prompt.sh
+fi
+
+archey -c
