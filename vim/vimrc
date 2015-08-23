@@ -13,3 +13,6 @@ set incsearch
 set noerrorbells
 set scrolloff=3
 set ruler
+
+let g:hybrid_use_Xresources=1
+colorscheme hybrid
