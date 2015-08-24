@@ -114,8 +114,8 @@ printf "${SUCCESS}\n"
 
 ###############################################################################
 printf "Setting OS X Preferences & System hacks: "
-. /osx/preferences.sh
-. /osx/hacks.sh
+. ~/.unboX/osx/preferences.sh
+. ~/.unboX/osx/hacks.sh
 printf "${SUCCESS}\n"
 
 
