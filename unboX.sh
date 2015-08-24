@@ -113,6 +113,13 @@ printf "${SUCCESS}\n"
 
 
 ###############################################################################
+printf "Setting OS X Preferences & System hacks: "
+./osx/preferences.sh
+./osx/hacks.sh
+printf "${SUCCESS}\n"
+
+
+###############################################################################
 printf "\nSoftware installation will now start with homebrew\n"
 printf "press any key to start"
 read key
@@ -122,7 +129,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
-source ~/.unboX/brew.cfg
+source ~/.unboX/brew/brew.cfg
 brew install ${binaries[@]}
 brew cask install --appdir="/Applications" ${apps[@]}
 brew cask install ${fonts[@]}
