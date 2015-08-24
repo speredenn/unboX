@@ -139,3 +139,4 @@ brew cask install ${fonts[@]}
 clear
 printf "${GREEN}OS X Environment Configuration Script${NC}\n\n"
 printf "${ORANGE}Setup done. Restart now${NC}\n"
+rm ~/unboX.log
