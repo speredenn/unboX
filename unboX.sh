@@ -96,7 +96,7 @@ printf "${SUCCESS}\n"
 
 ###############################################################################
 printf "Configuring git: "
-ln -sf ~/.unboX/git/gitconfig ~/.gitconfig
+cp -f ~/.unboX/git/gitconfig ~/.gitconfig
 ln -sf ~/.unboX/git/gitignore_global ~/.gitignore_global
 git config --global user.name $GIT_USERNAME
 git config --global user.email $GIT_EMAIL

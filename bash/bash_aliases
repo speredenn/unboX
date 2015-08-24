@@ -11,7 +11,7 @@ alias l="l1"
 alias ll="ls -lh"
 alias la="ls -a"
 alias lla="ls -lha"
-alias ls="ls --color"
+alias ls="ls -G"
 
 # Bash shortcuts
 alias dr="cd ~/Dropbox"
